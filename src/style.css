@@ -1,0 +1,122 @@
+:root {
+    --content-margin: 25px 50px;
+}
+
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(/src/fonts/Norse-Bold.otf);
+  }
+
+nav {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    padding: 10px;
+}
+
+.logo {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    font-family: Norse-Bold;
+    font-size: 54px;
+}
+
+.logo img {
+    background-size: cover;
+    width: 125px;
+}
+
+#image {
+    background-image: url("images/marc-sendra-martorell-6mdAagbT8gw-unsplash.jpg");
+    width: 800px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+}
+
+.content {
+    justify-content: center;
+    margin: 200px auto 0 auto;
+    border-bottom: 1px solid rgba(112, 111, 111, 0.897);
+}
+
+.content h2 {
+    margin: var(--content-margin);
+}
+
+.border {
+    border-bottom: 1px solid rgba(87, 86, 86, 0.1);
+    box-shadow: 0 8px 8px rgba(8, 8, 8, 0.897);
+    margin: 25px 0;
+}
+
+form {
+    padding: 50px 0;
+    align-items: center;
+}
+
+fieldset {
+    margin: var(--content-margin);
+    display: flex;
+    border: none;
+}
+
+label {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    padding: 3px;
+}
+
+input {
+    padding: 4px;
+    margin-right: 30px;
+    border: 1px solid rgba(117, 115, 115, 0.5);
+    border-style: solid;
+    outline-color: none;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+input:focus {
+    outline-color: #34515B;
+}
+
+input:invalid {
+    outline-color: #ff0000;
+}
+
+button {
+    padding: 10px 30px;
+    border: none;
+    font-size: 1rem;
+    margin: var(--content-margin);
+    background-color: #34515B;
+    color: white;
+}
+
+button:hover {
+    background-color: #346d80;
+    scale: 1.01;
+}
+
+.existing {
+    margin: var(--content-margin);
+}

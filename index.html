@@ -4,37 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/normalize.css">
     <link rel="stylesheet" href="src/style.css">
     <title>New User Sign Up!</title>
 </head>
 <body>
-    <header>
-        <h1 class="title">Let's get in touch</h1>
-        <nav><ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Store</a></li>
-            <li><a href="">Contact</a></li>
-        </ul></nav>
-    </header>
-    <form action="" method="post">
-        <fieldset>
-            <label for="firstName">FIRST NAME</label>
-            <input type="text" name="firstName">
-            <label for="lastName">LAST NAME</label>
-            <input type="text" name="lastName">
-        </fieldset>
-        <fieldset class="contact">
-            <label for="email">Email</label>
-            <input type="text" name="email">
-            <label for="phone">PHONE</label>
-            <input type="text" name="phone">
-        </fieldset>
-        <button type="submit">SUBMIT</button>
-    </form>
-    <div class="existing">
-        <p>Already have an account?</p>
+    <div class="container">
+        <div id="image">
+            <div class="logo">
+                <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="Odin">
+                <h1>ODIN</h1>
+            </div>
+        </div>
+        <div class="column-container content">
+            <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started!</h2>
+            <form action="" method="post">
+                <fieldset class="name">
+                    <div>
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" name="firstName" pattern="[a-zA-Z0-9]+" title="Please enter a valid name without special characters" required>
+                    </div>
+                    <div>
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" name="lastName" pattern="[a-zA-Z0-9]+" required>
+                    </div>
+                </fieldset>
+                <fieldset class="contact">
+                    <div>
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="phone">PHONE</label>
+                        <input type="text" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+                    </div>
+                </fieldset>
+                <fieldset class="password">
+                    <div>
+                        <label for="password">PASSWORD</label>
+                        <input id="password" type="password" name="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+                        <div id="error"></div>
+                    </div>
+                    <div>
+                        <label for="checkPassword">CONFIRM PASSWORD</label>
+                        <input id="checkPassword" type="password" name="checkPassword" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+                    </div>
+                </fieldset>
+                <div class="border"></div>
+                <button id="submit" action="#" type="submit">Create Account</button>
+            </form>
+            <div class="existing">
+                <p>Already have an account?</p>
+                <a href="#">Log in</a>
+            </div>
+        </div>
     </div>
-    <a href="">Log in</a>
 </body>
 <script src="src/script.js" defer></script>
 </html>
