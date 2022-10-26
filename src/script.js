@@ -13,6 +13,11 @@ const validation = (e) => {
         password.style.borderColor = "#ff0000";
         checkPassword.style.borderColor = "#ff0000";
     }
+    else if(passwordField === "" || passwordField === "") {
+        error.textContent = "Please enter your password";
+        password.style.borderColor = "#ff0000";
+        checkPassword.style.borderColor = "#ff0000";
+    }
     else if(passwordField !== checkPasswordField) {
         error.textContent = "Passwords do not match!";
         password.style.borderColor = "#ff0000";
