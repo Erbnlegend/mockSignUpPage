@@ -8,7 +8,7 @@ body {
 
 @font-face {
     font-family: Norse-Bold;
-    src: url(src/fonts/Norse-Bold.otf);
+    src: url("src/fonts/Norse-Bold.otf");
   }
 
 nav {
